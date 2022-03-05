@@ -1,18 +1,20 @@
+include <shelf.scad>;
+
 $fn = 100;
 
 // All dimensions in mm
 
-outer_thickness = 2;
-base_thickness = 3;
+outer_thickness = 20;
+base_thickness = 30;
 
-drawer_height = 15;
+drawer_height = 150;
 num_drawers = 3;
 
-width = 40;
-depth = 40;
+width = 400;
+depth = 400;
 height = (base_thickness - outer_thickness) + ((drawer_height + outer_thickness) * num_drawers);
 
-top_overlap = 1;
+top_overlap = 10;
 
 // NOTE: VECTORS ARE [WIDTH, DEPTH, HEIGHT]
 
@@ -70,3 +72,5 @@ module main() {
   color("purple")
   top();
 }
+
+main();
